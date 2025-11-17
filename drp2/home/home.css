@@ -1,0 +1,1263 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* coding the header */
+
+#header {
+    width: 100%;
+    height: 65px;
+    background-color: white;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0px 2px 5px 1px #ccc;
+}
+
+#menu_icon {
+    color: #B91C1C;
+    margin-right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#project_name {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 20px;
+}
+
+.menu_icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    float: left;
+}
+
+.login_icon, .logout_icon{
+    float: right;
+    border: #B91C1C solid 1px;
+    border-radius: 10px;
+    height: 40px;
+    width: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-right: 10px;
+    padding-top: 3px;
+}
+.logout_icon{
+    float: right;
+    border: #B91C1C solid 1px;
+    border-radius: 10px;
+    height: 40px;
+    width: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-right: 10px;
+    padding-top: 3px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: none;
+}
+
+.login_icon:hover, .logout_icon:hover {
+    background-color: #ffefef;
+    color: white;
+    transition: .2s;
+}
+
+
+
+#user_icon {
+    color: #B91C1C;
+    font-size: 15px;
+    margin-right: 5px;
+}
+
+.login_icon h2, .logout_icon h2{
+    color: #B91C1C;
+    text-align: center;
+    font-size: 17px;
+    font-family: sans-serif;
+    font-weight: 100;
+}
+
+
+/* coding of the hero section */
+
+#hero {
+    background-color: rgb(121, 121, 121);
+    width: 100%;
+    height: 600px;
+    display: flex;
+}
+
+#hero_box {
+    width: 60%;
+    height: 100%;
+    padding: 300px;
+}
+
+#slogan {
+    position: absolute;
+    top: 100px;
+    left: 20px;
+    margin-top: 65px;
+    color: white;
+    font-family: sans-serif;
+    font-size: 45px;
+}
+
+#slogan2 {
+    position: absolute;
+    top: 210px;
+    left: 17px;
+    margin-top: 90px;
+    color: white;
+    font-family: sans-serif;
+    font-size: 20px;
+    font-weight: 100;
+
+}
+
+.report_button {
+    width: 200px;
+    height: 50px;
+    position: absolute;
+    top: 380px;
+    left: 17px;
+    background-color: #DC2626;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 15px;
+    font-family: sans-serif;
+}
+
+.report_button:hover {
+    background-color: #B91C1C;
+    scale: 1.02;
+    transition: .2s;
+    cursor: pointer;
+}
+
+.donate_button {
+    width: 200px;
+    height: 50px;
+    position: absolute;
+    top: 380px;
+    left: 237px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #DC2626;
+    font-size: 15px;
+    font-family: sans-serif;
+}
+
+.donate_button:hover {
+    background-color: #ffefef;
+    scale: 1.02;
+    transition: .2s;
+    cursor: pointer;
+}
+
+.request_button{
+    width: 200px;
+    height: 50px;
+    position: absolute;
+    top: 450px;
+    left: 17px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #DC2626;
+    font-size: 15px;
+    font-family: sans-serif;
+}
+
+.request_button:hover {
+    background-color: #ffefef;
+    scale: 1.02;
+    transition: .2s;
+    cursor: pointer;
+}
+
+.report_button i,
+.donate_button i, .request_button i {
+    margin-right: 5px;
+}
+
+
+/* coding of the side bar */
+
+
+.overlay {
+
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.511);
+    display: none;
+}
+
+.side_bar {
+    height: 100vh;
+    width: 260px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: white;
+    display: none;
+
+
+
+}
+
+.side_bar_header {
+
+    display: flex;
+    align-items: center;
+    height: 60px;
+    padding: 10px;
+    font-family: sans-serif;
+    font-size: 15px;
+    padding-left: 15px;
+}
+
+.side_bar_header i {
+    font-size: 23px;
+    position: relative;
+    top: 1px;
+    left: 140px;
+    color: rgba(0, 0, 0, 0.466);
+}
+
+.side_bar_header i:hover {
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.651);
+}
+
+#menu_list {
+    font-family: sans-serif;
+
+    padding: 20px;
+    list-style: none;
+
+
+}
+
+#menu_items {
+    margin: 30px;
+    margin-left: 0px;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+#menu_items:hover {
+    cursor: pointer;
+    color: #DC2626;
+    transition: .1s;
+}
+
+
+/* coding of the login form */
+
+.login_form_overlay {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.559);
+    display: none;
+    z-index: 1000;
+
+}
+
+.login_form_box {
+    width: 30%;
+    background-color: rgb(255, 255, 255);
+    margin: 20px auto;
+    border-radius: 15px;
+    margin-top: 160px;
+    display: none;
+    z-index: 1000;
+}
+
+.login_form_header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+
+}
+
+.login_form_header h2 {
+    font-family: sans-serif;
+    font-size: 23px;
+    font-weight: 500;
+    margin-top: 50px;
+    padding-left: 10px;
+}
+
+.login_form_header i {
+    font-size: 20px;
+    position: relative;
+    top: 10px;
+    margin-top: 20px;
+    left: 300px;
+    color: rgba(0, 0, 0, 0.466);
+}
+
+.login_form_header i:hover {
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.651);
+}
+
+.login_form {
+    padding: 20px;
+}
+
+hr {
+    border: 1px solid #e6e5e5;
+    margin-top: 20px;
+}
+
+#login_email,
+#login_password,
+#login_button {
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+    font-family: sans-serif;
+    font-size: 17px;
+    padding-left: 10px;
+}
+
+#login_button,
+#signup_button {
+    background-color: #DC2626;
+    color: white;
+    font-family: sans-serif;
+    font-size: 15px;
+    cursor: pointer;
+    height: 43px;
+}
+
+#login_button:hover,
+#signup_button:hover {
+    background-color: #B91C1C;
+    transition: .2s;
+}
+
+#login_label_email,
+#login_label_password,
+#signup_label_name,
+#signup_label_email,
+#signup_label_password,
+#signup_label_confirmpassword {
+    font-family: sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+#login_link {
+    color: #DC2626;
+    text-decoration: none;
+    margin: 0 auto;
+    font-family: sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+#login_link:hover {
+    color: #B91C1C;
+    transition: .2s;
+}
+
+
+/* coding the signup form */
+
+.signup_form_overlay {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.559);
+    z-index: 1000;
+    display: none;
+}
+
+.signup_form_box {
+    width: 30%;
+    background-color: rgb(255, 255, 255);
+    margin: 0 auto;
+    border-radius: 15px;
+    margin-top: 110px;
+    display: none;
+}
+
+.signup_form_header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+
+}
+
+.signup_form_header h2 {
+    font-family: sans-serif;
+    font-size: 23px;
+    font-weight: 500;
+    padding-top: 20px;
+    padding-left: 10px;
+    margin-top: 23px;
+
+}
+
+.signup_form_header i {
+    font-size: 20px;
+    margin-left: 280px;
+    margin-top: 40px;
+    color: rgba(0, 0, 0, 0.466);
+}
+
+.signup_form_header i:hover {
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.651);
+}
+
+.signup_form {
+    padding: 20px;
+}
+
+#signup_link {
+    color: #DC2626;
+    text-decoration: none;
+    margin: 0 auto;
+    font-family: sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+#signup_link:hover {
+    color: #B91C1C;
+    transition: .2s;
+}
+
+#signup_name,
+#signup_email,
+#signup_password,
+#signup_confirmpassword,
+#signup_button {
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+    font-family: sans-serif;
+    font-size: 17px;
+    padding-left: 10px;
+}
+
+/* starting of the recently reported disasters */
+
+.disasters_box {
+    width: 100%;
+    height: 630px;
+    background-color: #f9f9ff;
+    padding: 30px;
+}
+
+.disasters_header h2 {
+    font-family: sans-serif;
+    font-size: 30px;
+    margin-top: 20px;
+}
+
+.reports_box {
+    width: 100%;
+    height: 100%;
+    margin-top: 10px;
+    padding: 30px;
+}
+
+.card {
+    width: 35%;
+    height: 350px;
+    border: 1px solid #ccc;
+    float: left;
+    margin-left: 20px;
+    box-shadow: 1px 1px 5px 1px #ccc;
+    margin-top: 20px;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.card:hover {
+    scale: 1.02;
+    transition: .2s;
+}
+
+#view_all_reports {
+    color: #DC2626;
+    font-family: sans-serif;
+    font-size: 14px;
+    text-decoration: none;
+    position: absolute;
+    right: 700px;
+    margin-top: 420px;
+}
+
+#view_all_reports:hover {
+    color: #B91C1C;
+    transition: .2s;
+}
+
+
+/* coding inside of the cards */
+
+.image {
+    border: 1px solid red;
+    width: 100%;
+    height: 50%;
+    overflow: hidden;
+}
+
+.image img {
+    background-size: contain;
+    width: 100%;
+    height: 100%;
+}
+
+.informations {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+#disaster_name_1,
+#disaster_name_2,
+#disaster_location_1,
+#disaster_location_2,
+#disaster_date_1,
+#disaster_date_2 {
+    font-family: sans-serif;
+    margin-bottom: 10px;
+    color: #292929;
+}
+
+#disaster_location_1,
+#disaster_location_2,
+#disaster_date_1,
+#disaster_date_2 {
+    font-family: sans-serif;
+    margin-bottom: 10px;
+    color: #454545;
+}
+
+.view_report {
+    height: 40px;
+    width: 100%;
+    background-color: #DC2626;
+    color: white;
+    font-family: sans-serif;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.view_report:hover {
+    background-color: #B91C1C;
+    transition: .2s;
+}
+
+
+/* coding of the current alerts section */
+
+.alert_section {
+    width: 100%;
+    height: 450px;
+    padding: 30px;
+}
+
+#alert_title h2 {
+    font-family: sans-serif;
+    font-size: 30px;
+    margin-top: 20px;
+}
+
+.alert_boxes {
+    width: 100%;
+    height: 300px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 40px;
+}
+
+.red_alert,
+.orange_alert,
+.yellow_alert {
+    width: 20%;
+    height: 200px;
+    border-radius: 15px;
+    padding: 10px;
+    box-shadow: 2px 2px 5px 1px #ccc;
+    cursor: pointer;
+}
+
+.red_alert:hover,
+.orange_alert:hover,
+.yellow_alert:hover {
+    scale: 1.02;
+    transition: .2s;
+}
+
+.red_alert {
+    background-color: #ff000005;
+    border: 2px solid #ff0000;
+}
+
+.red_alert:hover {
+    background-color: #ff000018;
+    transition: .2s;
+}
+
+.orange_alert {
+    background-color: #ff7e0005;
+    border: 2px solid #ff7e00;
+}
+
+.orange_alert:hover {
+    background-color: #ff7e0018;
+    transition: .2s;
+}
+
+.yellow_alert {
+    background-color: #ffea0005;
+    border: 2px solid #ffd000;
+}
+
+.yellow_alert:hover {
+    background-color: #ffea0018;
+    transition: .2s;
+}
+
+.alert_type {
+    font-family: sans-serif;
+    font-size: 22px !important;
+    text-align: center;
+    color: #4d4d4d;
+}
+
+.alert_numbers {
+    text-align: center;
+    margin-top: 10px;
+    font-family: sans-serif;
+    font-size: 70px;
+    color: #4d4d4d;
+}
+
+/* coding of the resources section */
+
+.resource_section {
+    width: 100%;
+    height: 500px;
+    background-color: #f9f9ff;
+    padding: 30px;
+}
+
+.resource_title h2 {
+    font-family: sans-serif;
+    font-size: 30px;
+    margin-top: 20px;
+}
+
+.resources_box {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+}
+
+/*resource card coding */
+
+.resource1,
+.resource2 {
+    width: 30%;
+    height: 230px;
+    float: left;
+    margin-left: 20px;
+    margin-top: 30px;
+    background-color: white;
+    box-shadow: 1px 1px 5px 1px #ccc;
+    border-radius: 5px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.resource1:hover,
+.resource2:hover {
+    scale: 1.02;
+    transition: .2s;
+}
+
+#view_all_resource_request {
+    color: #DC2626;
+    font-family: sans-serif;
+    font-size: 14px;
+    text-decoration: none;
+    position: absolute;
+    right: 660px;
+    margin-top: 310px;
+}
+
+#view_all_resource_request:hover {
+    color: #B91C1C;
+    transition: .2s;
+}
+
+.resource_name, .resource_name2 {
+    font-family: sans-serif;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.resource_name i, .resource_name2 i {
+    color: #B91C1C;
+    margin-right: 5px;
+}
+
+.resource_description, .resource_description2 {
+    font-family: sans-serif;
+    font-size: 16px;
+    margin-bottom: 18px;
+    margin-left: 5px;
+}
+
+.resource_location, .resource_location2 {
+    font-family: sans-serif;
+    font-size: 15px;
+    margin-bottom: 18px;
+    margin-left: 5px;
+    color: #454545;
+}
+
+
+#view_resource_details {
+    width: 100%;
+    height: 40px;
+    background-color: #DC2626;
+    color: white;
+    font-family: sans-serif;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#view_resource_details:hover {
+    background-color: #B91C1C;
+    transition: .2s;
+}
+
+/* <!-- coding of the Volunteer section --> */
+
+#volunteer_section {
+    width: 100%;
+    height: 400px;
+}
+
+.volunteer_box {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    padding: 10px;
+
+}
+
+.volunteer_circle {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    padding: 15px;
+    background-color: #b91c1c23;
+    margin: 40px 0px 30px 0;
+}
+
+.volunteer_circle i {
+    color: #B91C1C;
+    font-size: 30px;
+    margin-top: 5px;
+}
+
+.volunteer_box h2 {
+    font-family: sans-serif;
+    font-size: 35px;
+    color: #323232;
+    margin-bottom: 20px;
+}
+
+.volunteer_box span {
+    font-family: sans-serif;
+    font-size: 17px;
+    color: #393939;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#volunteer_button {
+    width: 250px;
+    height: 50px;
+    background-color: #DC2626;
+    color: white;
+    font-family: sans-serif;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 17px;
+}
+
+#volunteer_button:hover {
+    background-color: #B91C1C;
+    scale: 1.02;
+    transition: .2s;
+}
+
+/* coding of the footer section */
+
+
+#footer {
+    width: 100%;
+    height: 300px;
+    background-color: #111827;
+
+}
+
+.footer_box {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.aboutus,
+.contact_info,
+.followus {
+    width: 25%;
+    height: 180px;
+    float: left;
+    padding: 20px;
+    padding-top: 50px;
+}
+
+.aboutus h2,
+.contact_info h2,
+.followus h2 {
+    font-family: sans-serif;
+    font-size: 20px;
+    color: white;
+    font-weight: 200;
+    margin-top: 20px 0 20px 0;
+}
+
+#aboutus_text {
+    font-family: sans-serif;
+    font-size: 13px;
+    color: #eaeaea;
+    font-weight: 100;
+    text-align: center;
+}
+
+#contact_us {
+    font-family: sans-serif;
+    font-size: 15px;
+    color: #d7d7d7;
+    font-weight: 100;
+    text-align: left;
+    list-style: none;
+    margin: 0px 0 10px 0;
+    cursor: pointer;
+}
+
+#contact_us:hover {
+    color: white;
+    transition: .2s;
+}
+
+.followus i {
+    color: #d7d7d7;
+    margin: 10px;
+    font-size: 25px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.followus i:hover {
+    color: white;
+    scale: 1.02;
+    transition: .2s;
+}
+
+#footer_hr {
+    width: 100%;
+    border: 1px solid #2c2c2c;
+    margin-top: 10px;
+    align-self: stretch;
+}
+
+.footer_bottom {
+    text-align: center;
+    padding-top: 30px;
+}
+
+#footer_bottom_text {
+    font-family: sans-serif;
+    font-size: 13px;
+    color: #d7d7d7;
+}
+
+/* coding the volunteer form */
+
+.vol_form_overlay {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.559);
+    display: none;
+}
+
+.vol_form_section {
+    width: 40%;
+    background-color: #ffffff;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    margin-top: 80px;
+    border-radius: 10px;
+}
+
+.volunteer_header {
+    display: flex;
+    align-items: center;
+    padding: 30px;
+    height: 70px;
+    margin-bottom: -30px;
+}
+
+#vol_close_icon {
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.466);
+    margin-left: 380px;
+    cursor: pointer;
+}
+
+#vol_close_icon:hover {
+    color: rgba(0, 0, 0, 0.651);
+}
+
+.volunteer_header h2 {
+    font-family: sans-serif;
+    font-size: 30px;
+    font-weight: 200;
+
+}
+
+#volunteer_form {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.vol {
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+    font-family: sans-serif;
+    font-size: 17px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+#label_fullname {
+    margin-top: 8px;
+}
+
+#vol_gender,
+#vol_district {
+    width: 130px;
+    height: 30px;
+    margin: 10px 0 10px 0;
+}
+
+#vol_register_button {
+    width: 100%;
+    height: 40px;
+    background-color: #DC2626;
+    color: white;
+    font-family: sans-serif;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 17px;
+    margin-top: 20px;
+}
+
+.label {
+    font-family: sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+#vol_register_button:hover {
+    background-color: #B91C1C;
+    scale: 1.01;
+    transition: .2s;
+}
+
+#volunteer_form {
+    margin-top: -20px;
+}
+
+
+/* coding of the alert popup box */
+
+#alert_overlay {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.559);
+    z-index: 1000;
+    display: none;
+}
+
+.alertpp {
+    width: 35%;
+    height: 400px;
+    background-color: white;
+    border: 1px solid #ccc;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    padding: 20px;
+    z-index: 1000;
+}
+
+.alert_header {
+    width: 100%;
+    height: 50px;
+    margin-bottom: -20px;
+}
+
+.alert_header h2 {
+    font-family: sans-serif;
+    font-size: 25px;
+    text-align: left;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.alert_header i {
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.466);
+    cursor: pointer;
+    position: relative;
+    top: -25px;
+    left: 450px;
+}
+
+.alert_header i:hover {
+    color: rgba(0, 0, 0, 0.651);
+}
+
+.alert_hr {
+    width: 100%;
+    border: 1px solid #e6e5e5;
+    margin: 100px;
+}
+
+.alertDetails {
+    font-family: sans-serif;
+    font-size: 20px;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+
+/* coding the disaster report view details popup */
+
+#view_details_overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.559);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    margin: 0 auto;
+    display: none;
+}
+
+.view_details_popup {
+    width: 35%;
+    height: 600px;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 10px 1px #464646;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+
+.popupHeader {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    margin-bottom: -20px;
+}
+
+.popupHeader h2 {
+    font-family: sans-serif;
+    font-size: 25px;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.popupHeader i {
+    font-size: 25px;
+    color: rgba(0, 0, 0, 0.466);
+    cursor: pointer;
+    text-align: right;
+    margin-left: 200px;
+}
+
+.popupHeader i:hover {
+    color: rgba(0, 0, 0, 0.651);
+}
+
+.detailsBox {
+    width: 100%;
+    height: 80%;
+    position: relative;
+}
+
+.disImg {
+    height: 50%;
+    width: 100%;
+    border: 1px solid green;
+    margin: 1px;
+    overflow: hidden;
+}
+
+#imagViewDetails{
+    background-size: contain;
+    width: 100%;
+    height: 100%;
+}
+
+.disasterDetails{
+    height: 50%;
+    width: 50%;
+    position: relative;
+    background-color: #f4f4f4;
+    top: 0px;
+    left: 1px;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    justify-content: space-between;
+}
+
+.disasterDetails span{
+    font-family: sans-serif;
+    margin-top: 5px;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.userDetails{
+    width: 49%;
+    height: 50%;
+    float: right;
+    position: relative;
+    top: -224px;
+    display: flex;
+    flex-direction: column;
+    background-color: #f4f4f4;
+    padding: 25px;
+    justify-content: space-between;
+}
+
+.userDetails span{
+    font-family: sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.reporterDetails{
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 15px;
+}
+
+.reporterDetails span, .reporterDetails i{
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.reporterInfo{
+    white-space: nowrap;
+}
+

@@ -1,0 +1,185 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f9f9ff;
+}
+
+.container {
+    padding: 30px;
+    width: 100%;
+    height: 100%;
+}
+
+hr {
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+/* coding the header  */
+
+
+#header {
+    width: 100%;
+    height: 65px;
+    background-color: white;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0px 2px 5px 1px #ccc;
+}
+
+#menu_icon {
+    color: #B91C1C;
+    margin-right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#project_name {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 20px;
+}
+
+.menu_icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    float: left;
+}
+
+/* coding of the side bar */
+
+
+.overlay {
+
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.511);
+    display: none;
+}
+
+.side_bar {
+    height: 100vh;
+    width: 260px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: white;
+}
+
+.side_bar_header {
+
+    display: flex;
+    align-items: center;
+    height: 60px;
+    padding: 10px;
+    font-family: sans-serif;
+    font-size: 15px;
+    padding-left: 15px;
+}
+
+.side_bar_header i {
+    font-size: 23px;
+    position: relative;
+    top: 1px;
+    left: 140px;
+    color: rgba(0, 0, 0, 0.466);
+}
+
+.side_bar_header i:hover {
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.651);
+}
+
+#menu_list {
+    font-family: sans-serif;
+    padding: 20px;
+    list-style: none;
+
+
+}
+
+#menu_items {
+    margin: 30px;
+    margin-left: 0px;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+#menu_items:hover {
+    cursor: pointer;
+    color: #DC2626;
+    transition: .1s;
+}
+
+
+
+/* coding the donation form */
+
+.form_box{
+    width: 35%;
+    border: 1px solid red;
+    margin: 0 auto;
+    margin-top: 100px;
+    background-color: white;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0px 2px 5px 1px #ccc;
+}
+
+.form_header{
+    font-family: sans-serif;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.form{
+    margin-top: 30px;
+    padding: 20px;
+}
+
+#l{
+    font-family: sans-serif;
+}
+
+#name, #phone, #email, #amount {
+    width: 100%;
+    height: 40px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    font-family: sans-serif;
+    margin-bottom: 10px;
+}
+
+#submit{
+    width: 100%;
+    height: 40px;
+    background-color: #DC2626;
+    color: white;
+    font-family: sans-serif;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 17px;
+    margin-top: 20px;
+}
+
+#submit:hover{
+    background-color: #B91C1C;
+    scale: 1.02;
+    transition: .2s;
+}

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="request.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- coding header -->
+
+        <div id="header">
+            <div class="menu_icon">
+                <i class="fa fa-bars" id="menu_icon" aria-hidden="true"></i>
+                <h2 id="project_name">Disaster Relief</h5>
+            </div>
+
+
+        </div>
+
+
+        <!-- coding menu icon side bar -->
+
+        <div class="overlay">
+
+            <div class="side_bar animate__animated animate__slideInLeft animate__faster">
+                <div class="side_bar_header">
+                    <h2>Menu</h2>
+                    <i class="fa-solid fa-xmark" id="close_icon"></i>
+                </div>
+
+                <div class="menu_list">
+                    <ul id="menu_list">
+                        <li id="menu_items" class="home">Home</li>
+                        <li id="menu_items" class="report_disaster">Report Disaster</li>
+                        <li id="menu_items" class="donate">Donate</li>
+                        <li id="menu_items" class="volunteer">Volunteer</li>
+                        <li id="menu_items" class="contact">Contact Us</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <!-- coding of the reports box  -->
+
+    <div class="resource_box">
+        <div class="resource_header">
+            <h2>Requested Resources</h2>
+        </div>
+        <hr>
+
+        <div class="resources">
+            
+            
+        </div>
+    </div>
+
+    <!-- coding the disaster view details popup -->
+
+    <div id="view_details_overlay">
+        <div class="view_details_popup">
+            <div class="popupHeader">
+                <h2>Requested Resource</h2>
+                <i class="fa-solid fa-xmark" id="view_details_close_icon"></i>
+            </div>
+            <hr id="popup_hr">
+
+            <div class="detailsBox">
+                <div class="disImg">
+                    <img src="" alt="" id="imagViewDetails">
+                </div>
+                <div class="disasterDetails">
+                    <span id="disasterTitle"></span>
+                    <span id="urgencyLevel"></span>
+                    <span id="disasterLocation"></span>
+                    <span id="disasterDate"></span>
+
+
+                </div>
+                <div class="userDetails">
+                    <span id="disasterDescription"></span>
+                    <div class="reporterDetails">
+                        <p>Reported by:</p>
+                        <div class="reporterInfo">
+                            <i class="fa fa-user"></i> <span id="reporterName"></span>
+                        </div>
+                        <div class="reporterInfo">
+                            <i class="fa fa-phone"></i> <span id="reporterEmailorPhone"></span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- coding footer  -->
+
+    <div id="footer">
+        <div class="footer_box">
+            <div class="aboutus">
+                <h2>About Us</h2> <br>
+                <span id="aboutus_text">We are dedicated to providing immediate assistance and support during
+                    disasters,
+                    connecting
+                    communities, and facilitating relief efforts across the region.</span>
+            </div>
+            <div class="contact_info">
+                <h2>Contact Us</h2> <br>
+                <ol>
+                    <li id="contact_us">Emergency : 123-456-789</li>
+                    <li id="contact_us">Email: 4oB3t@example.com</li>
+                    <li id="contact_us">24/7 Support: 987-654-321</li>
+                </ol>
+            </div>
+            <div class="followus">
+                <h2>Follow Us</h2>
+                <i class="fa-brands fa-square-facebook"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-youtube"></i>
+            </div>
+        </div class="footer_box">>
+        <hr id="footer_hr">
+
+        <div class="footer_bottom">
+            <span id="footer_bottom_text">© 2025 Disaster Relief. All rights reserved.</span>
+        </div>
+    </div>
+    </div>
+
+
+
+
+
+    <script src="request.js"></script>
+</body>

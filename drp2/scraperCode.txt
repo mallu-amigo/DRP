@@ -1,0 +1,128 @@
+import requests
+from bs4 import BeautifulSoup
+import re
+import mysql.connector
+from datetime import datetime
+
+# Database Connection
+db = mysql.connector.connect(
+    host="localhost",
+    user="root",
+    password="",
+    database="drp"
+)
+cursor = db.cursor()
+
+# URL of the page to scrape
+url = "https://sdma.kerala.gov.in/rainfall-2/"
+
+# Get the current date in the same format as KSDMA (DD/MM/YYYY)
+current_date = datetime.now().strftime("%d/%m/%Y")
+
+# Convert the date to MySQL format (YYYY-MM-DD)
+mysql_alert_date = datetime.strptime(current_date, "%d/%m/%Y").strftime("%Y-%m-%d")
+
+# Send a request and get the HTML content
+response = requests.get(url)
+response.encoding = "utf-8"  # Ensure correct encoding
+html_content = response.text
+
+# Parse the HTML
+soup = BeautifulSoup(html_content, "html.parser")
+
+# Find the main content div (adjust if necessary)
+main_div = soup.find("div", class_="xdj266r x11i5rnm xat24cr x1mh8g0r x1vvkbs x126k92a")
+
+if not main_div:
+    print("Error: Could not find the main div. Check the class name.")
+    exit()
+
+# Dictionary to store alerts
+alerts = {
+    "Red Alert": [],
+    "Orange Alert": [],
+    "Yellow Alert": []
+}
+
+district_translation = {
+    "തിരുവനന്തപുരം": "Thiruvananthapuram",
+    "കൊല്ലം": "Kollam",
+    "പത്തനംതിട്ട": "Pathanamthitta",
+    "ആലപ്പുഴ": "Alappuzha",
+    "കോട്ടയം": "Kottayam",
+    "ഇടുക്കി": "Idukki",
+    "എറണാകുളം": "Ernakulam",
+    "തൃശ്ശൂർ": "Thrissur",
+    "പാലക്കാട്": "Palakkad",
+    "മലപ്പുറം": "Malappuram",
+    "കോഴിക്കോട്": "Kozhikode",
+    "വയനാട്": "Wayanad",
+    "കണ്ണൂർ": "Kannur",
+    "കാസർഗോഡ്": "Kasaragod"
+}
+
+# Regular expression to find date format (DD/MM/YYYY: )
+date_pattern = re.compile(r"\d{2}/\d{2}/\d{4}:")
+
+# Extract all text content
+text_content = main_div.get_text(" ", strip=True)
+
+# Find all date occurrences
+matches = date_pattern.finditer(text_content)
+
+for match in matches:
+    date_found = match.group(0).strip(":")  # Extract the date
+    if date_found != current_date:
+        continue  # Skip old alerts
+    
+    start_index = match.end()  # Start after the date colon ':'
+    remaining_text = text_content[start_index:]
+    end_index = remaining_text.find("എന്നീ")  # Find the keyword
+    
+    if end_index != -1:
+        district_text = remaining_text[:end_index].strip()
+        districts = [d.strip() for d in district_text.split(",")]
+        
+        # Identify the alert type in the remaining text
+        if "റെഡ് അലർട്ട്" in remaining_text:
+            alerts["Red Alert"].extend(districts)
+        elif "ഓറഞ്ച് അലർട്ട്" in remaining_text:
+            alerts["Orange Alert"].extend(districts)
+        elif "മഞ്ഞ അലർട്ട്" in remaining_text:
+            alerts["Yellow Alert"].extend(districts)
+
+# Insert data into the database
+for alert_type, districts in alerts.items():
+    translated_districts = [district_translation.get(d, d) for d in districts]  # Convert to English
+    
+    if translated_districts:  # If any districts are found
+        district_string = ", ".join(translated_districts).strip()
+
+        # Check if this alert already exists (Prevent duplicates)
+        cursor.execute(
+            """
+            SELECT id FROM alerts 
+            WHERE alert_type = %s 
+            AND LOWER(districts) = LOWER(%s) 
+            AND alert_date = %s
+            """,
+            (alert_type, district_string, mysql_alert_date)
+        )
+        existing_alert = cursor.fetchone()
+
+        if not existing_alert:  # Insert only if not already stored
+            cursor.execute(
+                """
+                INSERT INTO alerts (alert_type, districts, alert_date, scraped_at) 
+                VALUES (%s, %s, %s, NOW())
+                """,
+                (alert_type, district_string, mysql_alert_date)
+            )
+            db.commit()
+            print(f"✅ Inserted: {alert_type} -> {district_string} on {current_date}")
+        else:
+            print(f"⚠️ Duplicate alert found: {alert_type} -> {district_string} on {current_date} (Skipping)")
+
+# Close DB Connection
+cursor.close()
+db.close()

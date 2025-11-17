@@ -1,0 +1,291 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f9f9ff;
+}
+
+hr {
+    width: 95%;
+    margin: 0 auto;
+}
+
+
+/* coding the header  */
+
+#header {
+    width: 100%;
+    height: 65px;
+    background-color: white;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0px 2px 5px 1px #ccc;
+}
+
+#menu_icon {
+    color: #B91C1C;
+    margin-right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#project_name {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 20px;
+}
+
+.menu_icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    float: left;
+}
+
+
+/* coding footer */
+
+#footer {
+    width: 100%;
+    height: 300px;
+    background-color: #111827;
+}
+
+.footer_box {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.aboutus,
+.contact_info,
+.followus {
+    width: 25%;
+    height: 180px;
+    float: left;
+    padding: 20px;
+    padding-top: 50px;
+}
+
+.aboutus h2,
+.contact_info h2,
+.followus h2 {
+    font-family: sans-serif;
+    font-size: 20px;
+    color: white;
+    font-weight: 200;
+    margin-top: 20px 0 20px 0;
+}
+
+#aboutus_text {
+    font-family: sans-serif;
+    font-size: 13px;
+    color: #eaeaea;
+    font-weight: 100;
+    text-align: center;
+}
+
+#contact_us {
+    font-family: sans-serif;
+    font-size: 15px;
+    color: #d7d7d7;
+    font-weight: 100;
+    text-align: left;
+    list-style: none;
+    margin: 0px 0 10px 0;
+    cursor: pointer;
+}
+
+#contact_us:hover {
+    color: white;
+    transition: .2s;
+}
+
+.followus i {
+    color: #d7d7d7;
+    margin: 10px;
+    font-size: 25px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.followus i:hover {
+    color: white;
+    scale: 1.02;
+    transition: .2s;
+}
+
+#footer_hr {
+    width: 100%;
+    border: 1px solid #2c2c2c;
+    margin-top: 10px;
+    align-self: stretch;
+}
+
+.footer_bottom {
+    text-align: center;
+    padding-top: 30px;
+}
+
+#footer_bottom_text {
+    font-family: sans-serif;
+    font-size: 13px;
+    color: #d7d7d7;
+}
+
+
+/* coding the reporting box */
+
+.reporting_box {
+    width: 45%;
+    border: 1px solid red;
+    margin: 0 auto;
+    margin-top: 100px;
+    background-color: white;
+    box-shadow: 0px 2px 5px 1px #ccc;
+    border-radius: 8px;
+    margin-bottom: 50px;
+}
+
+.reporting_header {
+    width: 100%;
+    height: 70px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.reporting_header h2 {
+    font-family: sans-serif;
+    font-size: 25px;
+    display: flex;
+    white-space: nowrap;
+}
+
+.requesting_form {
+    width: 100%;
+    padding: 20px;
+}
+
+
+/* coding the form */
+
+.l {
+    font-family: sans-serif;
+    margin-bottom: 40px;
+}
+
+.i {
+    width: 100%;
+    height: 40px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    padding: 10px;
+    outline: none;
+    resize: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.c_location {
+    width: 30%;
+    height: 30px;
+    margin-bottom: 15px;
+}
+
+#submit_btn {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: 40px;
+    background-color: #DC2626;
+    color: white;
+    font-family: sans-serif;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 17px;
+    margin-top: 20px;
+}
+
+#submit_btn:hover {
+    background-color: #B91C1C;
+    scale: 1.01;
+    transition: .2s;
+}
+
+
+/* coding of the side bar */
+
+
+.overlay {
+
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.511);
+    display: none;
+}
+
+.side_bar {
+    height: 100vh;
+    width: 260px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: white;
+}
+
+.side_bar_header {
+
+    display: flex;
+    align-items: center;
+    height: 60px;
+    padding: 10px;
+    font-family: sans-serif;
+    font-size: 15px;
+    padding-left: 15px;
+}
+
+.side_bar_header i {
+    font-size: 23px;
+    position: relative;
+    top: 1px;
+    left: 140px;
+    color: rgba(0, 0, 0, 0.466);
+}
+
+.side_bar_header i:hover {
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.651);
+}
+
+#menu_list {
+    font-family: sans-serif;
+
+    padding: 20px;
+    list-style: none;
+
+
+}
+
+#menu_items {
+    margin: 30px;
+    margin-left: 0px;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+#menu_items:hover {
+    cursor: pointer;
+    color: #DC2626;
+    transition: .1s;
+}
